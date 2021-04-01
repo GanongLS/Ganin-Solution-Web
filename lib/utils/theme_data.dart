@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 var lightThemeData = ThemeData(
+  // platform: TargetPlatform.android,
   primarySwatch: Colors.blueGrey,
   backgroundColor: Colors.white,
   cardColor: Colors.blueGrey[50],

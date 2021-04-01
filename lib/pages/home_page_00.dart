@@ -3,12 +3,12 @@
 import 'package:flutter/material.dart';
 import 'package:web_02/widgets/widgets.dart';
 
-class HomePage extends StatefulWidget {
+class HomePage00 extends StatefulWidget {
   @override
   _HomePageState createState() => _HomePageState();
 }
 
-class _HomePageState extends State<HomePage> {
+class _HomePageState extends State<HomePage00> {
   late ScrollController _scrollController;
   // ignore: unused_field
   double _scrollPosition = 0;
@@ -38,10 +38,10 @@ class _HomePageState extends State<HomePage> {
       appBar: ResponsiveWidget.isSmallScreen(context)
           ? PreferredSize(
               preferredSize: Size.fromHeight(kToolbarHeight),
-              child: SmallAppBar(opacity: _opacity))
+              child: SmallAppBar00(opacity: _opacity))
           : PreferredSize(
               preferredSize: Size(screenSize.width, 1000),
-              child: MedTopBar(
+              child: MedTopBar00(
                 opacity: _opacity,
               ),
             ),
@@ -70,7 +70,7 @@ class _HomePageState extends State<HomePage> {
                       child: Column(
                         children: [
                           BasicHeading(screenSize: screenSize),
-                          // BasicTiles(screenSize: screenSize)
+                          BasicTiles(screenSize: screenSize)
                         ],
                       ),
                     ),
@@ -85,15 +85,15 @@ class _HomePageState extends State<HomePage> {
   }
 }
 
-class MedTopBar extends StatefulWidget {
+class MedTopBar00 extends StatefulWidget {
   final double opacity;
-  MedTopBar({Key? key, required this.opacity}) : super(key: key);
+  MedTopBar00({Key? key, required this.opacity}) : super(key: key);
 
   @override
   _MedTopBarState createState() => _MedTopBarState();
 }
 
-class _MedTopBarState extends State<MedTopBar> {
+class _MedTopBarState extends State<MedTopBar00> {
   // List _isHovering = [false, false, false, false];
   @override
   Widget build(BuildContext context) {
@@ -118,14 +118,14 @@ class _MedTopBarState extends State<MedTopBar> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  HoverLineButton(
+                  HoverLineButton00(
                     title: "Discover",
                     onPress: () {
                       Navigator.of(context).pushNamed("/00");
                     },
                   ),
                   SizedBox(width: screenSize.width / 20),
-                  HoverLineButton(
+                  HoverLineButton00(
                     title: "Contact Us",
                     onPress: () {
                       Navigator.of(context).pushNamed("/");
@@ -145,9 +145,9 @@ class _MedTopBarState extends State<MedTopBar> {
               },
             ),
             SizedBox(width: screenSize.width * 0.02),
-            HoveredButton(title: "Sign Up"),
+            HoveredButton00(title: "Sign Up"),
             SizedBox(width: screenSize.width / 50),
-            HoveredButton(title: "Sign In"),
+            HoveredButton00(title: "Sign In"),
           ],
         ),
       ),
@@ -155,8 +155,8 @@ class _MedTopBarState extends State<MedTopBar> {
   }
 }
 
-class SmallAppBar extends StatelessWidget {
-  const SmallAppBar({
+class SmallAppBar00 extends StatelessWidget {
+  const SmallAppBar00({
     Key? key,
     required double opacity,
   })   : _opacity = opacity,
@@ -195,17 +195,17 @@ class SmallAppBar extends StatelessWidget {
   }
 }
 
-class HoverLineButton extends StatefulWidget {
+class HoverLineButton00 extends StatefulWidget {
   final String title;
   final VoidCallback onPress;
-  HoverLineButton({Key? key, required this.title, required this.onPress})
+  HoverLineButton00({Key? key, required this.title, required this.onPress})
       : super(key: key);
 
   @override
   _HoverLineButtonState createState() => _HoverLineButtonState();
 }
 
-class _HoverLineButtonState extends State<HoverLineButton> {
+class _HoverLineButtonState extends State<HoverLineButton00> {
   bool _isHovering = false;
 
   @override
@@ -246,15 +246,15 @@ class _HoverLineButtonState extends State<HoverLineButton> {
   }
 }
 
-class HoveredButton extends StatefulWidget {
+class HoveredButton00 extends StatefulWidget {
   final String title;
-  HoveredButton({Key? key, required this.title}) : super(key: key);
+  HoveredButton00({Key? key, required this.title}) : super(key: key);
 
   @override
   _HoveredButtonState createState() => _HoveredButtonState();
 }
 
-class _HoveredButtonState extends State<HoveredButton> {
+class _HoveredButtonState extends State<HoveredButton00> {
   bool _isHovering = false;
 
   @override

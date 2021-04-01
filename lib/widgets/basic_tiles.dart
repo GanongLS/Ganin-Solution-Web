@@ -15,18 +15,22 @@ class BasicTiles extends StatelessWidget {
     'assets/images/self_dev.jpeg',
     'assets/images/communication.jpg',
     'assets/images/presentation.jpg',
+    'assets/images/working.jpg',
+    'assets/images/investment.jpg',
+    'assets/images/law40.jpg',
+    'assets/images/sultan_salahuddin.jpg',
+    'assets/images/fr_revolt.jpg',
   ];
 
-  // final List<String> title = ['Trekking', 'Animals', 'Photography'];
   final List<String> title = [
     'Way of Life',
     'Self Development',
     'Communication',
     'Marketing & Presentation',
-    'Products & Services',
-    'Financial & Invesation',
+    'Create & Provide',
+    'Financial & Investment',
     'Law & Legal',
-    'Streng, Authority & Power',
+    'Strength, Authority & Power',
     'Politics, Scheme & Strategies',
   ];
 

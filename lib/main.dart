@@ -22,7 +22,33 @@ class MyApp extends StatelessWidget {
       darkTheme: darkThemeData,
       debugShowCheckedModeBanner: false,
       themeMode: EasyDynamicTheme.of(context).themeMode,
-      home: HomePage(),
+      // home: HomePage(),
+      initialRoute: '/',
+
+      ///* tapi kalau routesnya ga ada mereka ga akan mengeluarkan routes di route bar.
+      routes: {
+        '/': (context) => HomePage(),
+        '/00': (context) => HomePage00(),
+      },
+
+      ///* onGenerateRoute digunakan untuk menghilangkan animasi default dari flutter. yang katanya kaya bledeg _LS
+      onGenerateRoute: (setting) {
+        switch (setting.name) {
+          case "/":
+            return PageRouteBuilder(
+              pageBuilder: (_, __, ___) => HomePage(),
+              transitionDuration: Duration(seconds: 0),
+              // transitionsBuilder: (_, a, __, c) =>
+              //     FadeTransition(opacity: a, child: c),
+            );
+          case "/00":
+            return PageRouteBuilder(
+              pageBuilder: (_, __, ___) => HomePage00(),
+              transitionDuration: Duration(seconds: 0),
+            );
+          default:
+        }
+      },
     );
   }
 }
